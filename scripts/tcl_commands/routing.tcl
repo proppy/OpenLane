@@ -491,8 +491,6 @@ proc run_routing {args} {
         logic_equiv_check -rhs $::env(PREV_NETLIST) -lhs $::env(CURRENT_NETLIST)
     }
 
-    scrot_klayout -layout $::env(CURRENT_DEF) -log $::env(routing_logs)/screenshot.log
-
     # spef extraction at the three corners
     set ::env(SPEF_FASTEST) [file rootname $::env(CURRENT_DEF)].ff.spef;
     set ::env(SPEF_TYPICAL) [file rootname $::env(CURRENT_DEF)].tt.spef;

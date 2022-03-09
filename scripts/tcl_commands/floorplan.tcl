@@ -432,8 +432,6 @@ proc run_power_grid_generation {args} {
 
 		tap_decap_or
 
-		scrot_klayout -layout $::env(CURRENT_DEF) -log $::env(floorplan_logs)/screenshot.log
-
 		run_power_grid_generation
 	}
 

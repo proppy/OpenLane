@@ -160,8 +160,6 @@ proc run_placement {args} {
     }
 
     detailed_placement_or -def $::env(placement_results)/$::env(DESIGN_NAME).def -log $::env(placement_logs)/detailed.log
-
-    scrot_klayout -layout $::env(CURRENT_DEF) -log $::env(placement_logs)/screenshot.log
 }
 
 proc run_resizer_design {args} {

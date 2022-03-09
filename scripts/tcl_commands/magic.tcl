@@ -44,9 +44,6 @@ proc run_magic {args} {
 		}
 
 		file copy -force $::env(MAGIC_MAGICRC) $::env(finishing_results)/.magicrc
-		# Take a PNG screenshot
-		scrot_klayout -log $::env(cts_logs)/screenshot.log
-
 		if { ($::env(MAGIC_GENERATE_LEF) && $::env(MAGIC_GENERATE_MAGLEF)) || $::env(MAGIC_INCLUDE_GDS_POINTERS) } {
 			puts_info "Generating MAGLEF views..."
 
