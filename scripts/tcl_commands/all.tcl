@@ -399,6 +399,10 @@ proc prep {args} {
     }
 
     source $scl_config
+    
+    if { [file exists $::env(OPENLANE_ROOT)/install/env.tcl ] } {
+	    source $::env(OPENLANE_ROOT)/install/env.tcl
+    }
 
     # needs to be resourced to make sure it overrides the above
     source_config $::env(DESIGN_CONFIG)
